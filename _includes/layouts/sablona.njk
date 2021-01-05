@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{ title }}</title>
+
+
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Pangolin&display=swap" rel="stylesheet"> 
+
+
+
+</head>
+<body>
+<!-- HEADER -->
+<header class="header">
+    
+    <div class="header__kontejner">
+        
+
+    <a href="/" class="header__logolink" >Doggies</a>
+
+    
+    <label for="menu-checkbox" class="menu__toggler">☰</label>
+    <nav class="header__nav">
+
+        <input type="checkbox" class="menu__checkbox" id="menu-checkbox">
+	
+		<ul class="header__list">
+
+    <li class="header__item"> <a href="/about/" class="header__link {% if menu === 'onas' %}header__item--active{% endif %}">O nás</a></li>
+    <li class="header__item"><a href="/dogs/" class="header__link {% if menu === 'dogs' %}header__item--active{% endif %}" >Pomáhejte</a></li>
+    <li class="header__item"><a href="/galerie/" class="header__link {% if menu === 'galerie' %}header__item--active{% endif %}" >Galerie</a></li>
+    <li class="header__item"><a href="/more/" class="header__link {% if menu === 'more' %}header__item--active{% endif %}" >Zachránci</a></li>
+    <li class="header__item"><a href="/prihlaska/" role="button" class="header__button--primary button">Chceme pejska</a></li>
+    </ul>
+
+        </div>
+    </nav>
+    
+</div>
+</header>
+
+
+
+
+<main class="obal">
+
+    {{ content | safe }}
+
+</main>
+
+<footer class="footer">
+
+    <section class="sponzori">
+        <div class="sponzori__row">
+            
+            <h2 class="sponzori__h2>"> Bez vaší podpory by to nešlo.<br><span style="color: black;"> Děkujeme</span></h2>
+            
+            <section class="sponzori__grid">
+            <a href="#"><img class="sponzori__logo" src="/soubor/logo1.png" alt="Logo partnera"></a>
+            <a href="#"><img class="sponzori__logo" src="/soubor/logo1.png" alt="Logo partnera"></a>
+            <a href="#"><img class="sponzori__logo" src="/soubor/logo1.png" alt="Logo partnera"></a>
+            </section>
+        </div>
+    </section>
+
+ 
+
+    <div class="copyright">
+        <p class="copyright__perex">Copyright © 2021, Útulek A-Z .</p>
+    </div>
+
+</footer>
+
+
+
+</html>
